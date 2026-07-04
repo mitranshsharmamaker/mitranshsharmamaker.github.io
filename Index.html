@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitransh Sharma Event Management</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            line-height:1.6;
+            color:#333;
+        }
+
+        header{
+            background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80');
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        header h1{
+            font-size:4rem;
+            margin-bottom:15px;
+        }
+
+        header p{
+            font-size:1.3rem;
+            max-width:700px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 28px;
+            background:#ff6b35;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#e55a28;
+        }
+
+        nav{
+            position:fixed;
+            width:100%;
+            top:0;
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            z-index:1000;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            padding:15px;
+        }
+
+        nav ul li{
+            margin:0 15px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#333;
+            font-weight:bold;
+        }
+
+        section{
+            padding:80px 10%;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:2.5rem;
+            color:#ff6b35;
+        }
+
+        .services{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#f8f8f8;
+            padding:30px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            color:#ff6b35;
+        }
+
+        .about{
+            text-align:center;
+            max-width:900px;
+            margin:auto;
+        }
+
+        .contact{
+            background:#f4f4f4;
+            text-align:center;
+        }
+
+        .contact p{
+            margin:10px 0;
+            font-size:1.1rem;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            header h1{
+                font-size:2.5rem;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Mitransh Sharma Event Management</h1>
+        <p>
+            Turning your special moments into unforgettable experiences.
+            We plan, organize, and manage events with creativity,
+            professionalism, and perfection.
+        </p>
+        <a href="#contact" class="btn">Book Your Event</a>
+    </header>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Wedding Planning</h3>
+                <p>
+                    Elegant wedding management, venue decoration,
+                    catering coordination, and complete event execution.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Corporate Events</h3>
+                <p>
+                    Professional conferences, seminars, product launches,
+                    and corporate celebrations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Birthday Parties</h3>
+                <p>
+                    Fun-filled birthday celebrations with creative themes,
+                    entertainment, and decorations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Social Gatherings</h3>
+                <p>
+                    Family functions, anniversaries, cultural programs,
+                    and private events managed seamlessly.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+
+        <div class="about">
+            <p>
+                Welcome to Mitransh Sharma Event Management. We specialize
+                in creating memorable events tailored to your vision and
+                budget. Our experienced team ensures every detail is handled
+                professionally, allowing you to enjoy your special occasion
+                stress-free.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <p><strong>Owner:</strong> Mitransh Sharma</p>
+        <p><strong>Email:</strong> your-email@example.com</p>
+        <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        <p>Available for Weddings, Corporate Events, Birthdays, and Special Occasions.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mitransh Sharma Event Management. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

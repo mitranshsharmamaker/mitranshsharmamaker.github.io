@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 1 - Riddle Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="glass">
+
+    <h1>🧩 Puzzle 1</h1>
+
+    <p id="playerDisplay"></p>
+
+    <div class="puzzle-box">
+
+        <p>
+            I have keys but no locks.<br>
+            I have space but no room.<br>
+            You can enter but can't go outside.<br><br>
+
+            <strong>What am I?</strong>
+        </p>
+
+    </div>
+
+    <br>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'Keyboard')">
+        Keyboard
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'Keyboard')">
+        Piano
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'Keyboard')">
+        House
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'Keyboard')">
+        Car
+    </button>
+
+    <h2 id="result" style="margin-top:25px;"></h2>
+
+    <button
+        id="nextBtn"
+        class="next-btn"
+        onclick="goTo('puzzle2.html')">
+        Next Puzzle →
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

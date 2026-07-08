@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 2 - Emoji Puzzle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="glass">
+
+    <h1>🎭 Puzzle 2</h1>
+
+    <p id="playerDisplay"></p>
+
+    <div class="puzzle-box">
+
+        <h2 style="font-size:60px;">🦁 👑</h2>
+
+        <p style="margin-top:20px;">
+            Guess the movie represented by these emojis.
+        </p>
+
+    </div>
+
+    <br>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'The Lion King')">
+        The Lion King
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'The Lion King')">
+        Jungle Book
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'The Lion King')">
+        Madagascar
+    </button>
+
+    <button class="option-btn"
+        onclick="checkAnswer(this,'The Lion King')">
+        Tarzan
+    </button>
+
+    <h2 id="result" style="margin-top:25px;"></h2>
+
+    <button
+        id="nextBtn"
+        class="next-btn"
+        onclick="goTo('puzzle3.html')">
+        Next Puzzle →
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

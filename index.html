@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover the artistic journey of sketch artist Vilas Nayak, his creativity, passion and dedication to the world of art.">
+
+    <title>Vilas Nayak | The Art of Sketching</title>
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ========================================
+           ROOT VARIABLES
+        ======================================== */
+
+        :root {
+            --background-dark: #100b08;
+            --background-brown: #2d1b11;
+            --background-warm: #4a2b17;
+
+            --gold: #e7ad58;
+            --gold-light: #ffd899;
+            --cream: #f4e8d8;
+            --text-muted: #cfc0af;
+
+            --glass-background: rgba(255, 255, 255, 0.06);
+            --glass-border: rgba(255, 255, 255, 0.13);
+        }
+
+
+        /* ========================================
+           BODY
+        ======================================== */
+
+        body {
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: var(--cream);
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(231, 173, 88, 0.20),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(128, 70, 35, 0.28),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    var(--background-dark),
+                    var(--background-brown),
+                    var(--background-dark)
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ========================================
+           DECORATIVE BACKGROUND
+        ======================================== */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            top: -200px;
+            right: -150px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(231, 173, 88, 0.16),
+                    transparent 70%
+                );
+
+            pointer-events: none;
+        }
+
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 400px;
+            height: 400px;
+
+            bottom: -180px;
+            left: -150px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(170, 95, 45, 0.18),
+                    transparent 70%
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* ========================================
+           MAIN CONTAINER
+        ======================================== */
+
+        .container {
+            position: relative;
+
+            width: 100%;
+            max-width: 1150px;
+
+            min-height: 650px;
+
+            padding: 65px;
+
+            background: var(--glass-background);
+
+            border: 1px solid var(--glass-border);
+
+            border-radius: 32px;
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 35px 90px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+            overflow: hidden;
+        }
+
+
+        /* ========================================
+           DECORATIVE ART CIRCLE
+        ======================================== */
+
+        .art-circle {
+            position: absolute;
+
+            width: 400px;
+            height: 400px;
+
+            right: -100px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(231, 173, 88, 0.18);
+
+            pointer-events: none;
+        }
+
+
+        .art-circle::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 40px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(231, 173, 88, 0.14);
+        }
+
+
+        .art-circle::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 90px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(231, 173, 88, 0.12),
+                    transparent 70%
+                );
+        }
+
+
+        /* ========================================
+           TOP BAR
+        ======================================== */
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 70px;
+        }
+
+
+        .chapter {
+            color: var(--gold);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .series {
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ========================================
+           CONTENT
+        ======================================== */
+
+        .content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 780px;
+        }
+
+
+        .eyebrow {
+            display: inline-block;
+
+            color: var(--gold-light);
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 20px;
+            font-style: italic;
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 {
+            max-width: 900px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(58px, 9vw, 112px);
+
+            font-weight: 500;
+
+            line-height: 0.9;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 25px;
+
+            color: #fff8ed;
+        }
+
+
+        h1 span {
+            display: block;
+
+            color: var(--gold);
+        }
+
+
+        .divider {
+            width: 100px;
+            height: 2px;
+
+            margin: 30px 0;
+
+            background:
+                linear-gradient(
+                    to right,
+                    var(--gold),
+                    transparent
+                );
+        }
+
+
+        /* ========================================
+           INTRODUCTION TEXT
+        ======================================== */
+
+        .introduction {
+            max-width: 720px;
+
+            color: var(--text-muted);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin-bottom: 18px;
+        }
+
+
+        .introduction strong {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+
+        /* ========================================
+           QUOTE
+        ======================================== */
+
+        .quote {
+            max-width: 650px;
+
+            margin-top: 30px;
+
+            padding-left: 22px;
+
+            border-left: 2px solid var(--gold);
+
+            color: #e9d9c5;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 20px;
+            font-style: italic;
+
+            line-height: 1.6;
+        }
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 55px;
+        }
+
+
+        .journey-text {
+            color: #a99582;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+
+        .next-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 15px 28px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold-light),
+                    #c9822f
+                );
+
+            color: #1a1009;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            box-shadow:
+                0 10px 30px rgba(231, 173, 88, 0.18);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .next-button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(231, 173, 88, 0.32);
+        }
+
+
+        .arrow {
+            font-size: 20px;
+
+            transition: transform 0.3s ease;
+        }
+
+
+        .next-button:hover .arrow {
+            transform: translateX(5px);
+        }
+
+
+        /* ========================================
+           DECORATIVE SIGNATURE
+        ======================================== */
+
+        .signature {
+            position: absolute;
+
+            right: 55px;
+            bottom: 110px;
+
+            color: rgba(231, 173, 88, 0.13);
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 75px;
+            font-style: italic;
+
+            transform: rotate(-8deg);
+
+            user-select: none;
+            pointer-events: none;
+        }
+
+
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+
+        @media (max-width: 800px) {
+
+            body {
+                padding: 20px 12px;
+            }
+
+            .container {
+                min-height: auto;
+
+                padding: 35px 25px;
+
+                border-radius: 24px;
+            }
+
+            .top-bar {
+                margin-bottom: 50px;
+            }
+
+            .series {
+                display: none;
+            }
+
+            h1 {
+                font-size: clamp(50px, 17vw, 80px);
+
+                letter-spacing: -3px;
+            }
+
+            .art-circle {
+                width: 300px;
+                height: 300px;
+
+                opacity: 0.6;
+            }
+
+            .signature {
+                display: none;
+            }
+
+            .navigation {
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 25px;
+            }
+
+            .next-button {
+                width: 100%;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 53px;
+            }
+
+            .introduction {
+                font-size: 15px;
+            }
+
+            .quote {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- Decorative background artwork -->
+
+        <div class="art-circle"></div>
+
+
+        <!-- Top Information -->
+
+        <header class="top-bar">
+
+            <p class="chapter">
+                Chapter 01 / 10
+            </p>
+
+            <p class="series">
+                The Artistic Journey
+            </p>
+
+        </header>
+
+
+        <!-- Main Content -->
+
+        <section class="content">
+
+            <span class="eyebrow">
+                The Artist Behind the Lines
+            </span>
+
+
+            <h1>
+                Vilas
+                <span>Nayak.</span>
+            </h1>
+
+
+            <div class="divider"></div>
+
+
+            <p class="introduction">
+
+                <strong>Vilas Nayak</strong> is an artist known for transforming
+                imagination, movement and emotion into powerful visual expressions.
+                Through confident strokes, careful observation and artistic dedication,
+                his work demonstrates how simple lines can evolve into meaningful
+                works of art.
+
+            </p>
+
+
+            <p class="introduction">
+
+                His artistic journey reflects creativity, patience and continuous
+                practice. From understanding the fundamentals of sketching to developing
+                expressive portraits and detailed artworks, every stage represents
+                growth and a deeper connection with art.
+
+            </p>
+
+
+            <blockquote class="quote">
+
+                “Every masterpiece begins with a single line, but it is imagination
+                that gives that line a soul.”
+
+            </blockquote>
+
+        </section>
+
+
+        <!-- Decorative Signature -->
+
+        <div class="signature">
+            VN
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <span class="journey-text">
+                Begin the artistic journey
+            </span>
+
+
+            <a href="image2.html" class="next-button">
+
+                Explore Chapter Two
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </nav>
+
+    </main>
+
+</body>
+
+</html>
